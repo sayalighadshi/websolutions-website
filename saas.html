@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professional Web Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',Arial,sans-serif;
+}
+body{
+  background:#f8fafc;
+  color:#1f2937;
+  line-height:1.6;
+}
+
+/* ===== Animations ===== */
+.animate{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+.animate.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.delay-1{transition-delay:.1s}
+.delay-2{transition-delay:.2s}
+.delay-3{transition-delay:.3s}
+
+/* Header */
+header{
+  background:#0f172a;
+  color:white;
+  padding:20px 0;
+}
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+/* Hero */
+.hero{
+  padding:80px 0;
+  background:linear-gradient(to right,#0f172a,#1e293b);
+  color:white;
+}
+.hero h1{font-size:42px;margin-bottom:15px;}
+.hero p{max-width:600px;font-size:18px;}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 30px;
+  background:#38bdf8;
+  color:#0f172a;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+/* Sections */
+section{padding:70px 0;}
+.section-title{text-align:center;margin-bottom:40px;}
+.section-title h2{font-size:32px;}
+
+/* Cards */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Contact */
+.contact{max-width:600px;margin:auto;}
+input,textarea,button{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+button{
+  background:#0f172a;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* Footer */
+footer{
+  background:#020617;
+  color:#94a3b8;
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<h2>WebSolutions</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1 id="headline" class="animate">Modern Websites for Growing Businesses</h1>
+<p id="subtext" class="animate delay-1">
+We help UK & US businesses build high-quality websites.
+</p>
+<a href="#contact" class="btn animate delay-2">Free Consultation</a>
+<a href="https://calendly.com/" target="_blank" class="btn animate delay-3">Book a Call</a>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-title animate"><h2>Our Services</h2></div>
+<div class="services">
+<div class="card animate">Website Design</div>
+<div class="card animate delay-1">Web Development</div>
+<div class="card animate delay-2">E-Commerce</div>
+<div class="card animate delay-3">SEO & Performance</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title animate"><h2>Why Choose Us</h2></div>
+<div class="services">
+<div class="card animate">Global Experience</div>
+<div class="card animate delay-1">On-Time Delivery</div>
+<div class="card animate delay-2">Mobile-First Design</div>
+<div class="card animate delay-3">Ongoing Support</div>
+</div>
+</div>
+</section>
+
+<section style="background:#eef2ff;">
+<div class="container">
+<div class="section-title animate"><h2>Client Testimonials</h2></div>
+<div class="services">
+<div class="card animate">Sarah M. — UK</div>
+<div class="card animate delay-1">James R. — USA</div>
+<div class="card animate delay-2">Emily T. — USA</div>
+</div>
+</div>
+</section>
+
+<section id="pricing" style="background:#f1f5f9;">
+<div class="container">
+<div class="section-title animate"><h2>Pricing Plans</h2></div>
+<div class="services">
+<div class="card animate">Starter £299 / $399</div>
+<div class="card animate delay-1">Business £699 / $899</div>
+<div class="card animate delay-2">Premium £1299 / $1599</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-title animate"><h2>Contact Us</h2></div>
+<form class="contact animate">
+<input placeholder="Your Name" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Project details"></textarea>
+<button>Request a Quote</button>
+</form>
+</div>
+</section>
+
+<footer>
+© 2026 WebSolutions – Serving UK & USA
+</footer>
+
+<!-- Floating Buttons -->
+<a href="https://calendly.com/" target="_blank"
+style="position:fixed;bottom:90px;right:20px;background:#0f172a;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;">
+📅 Book Call
+</a>
+
+<a href="https://wa.me/447000000000" target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;">
+💬 WhatsApp
+</a>
+
+<script>
+// Scroll animation (PRO)
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+
+document.querySelectorAll('.animate').forEach(el=>{
+  observer.observe(el);
+});
+
+// Niche switch
+const niche="marketing";
+if(niche==="marketing"){
+headline.innerText="Digital Marketing Websites That Convert";
+subtext.innerText="High-converting landing pages for UK & US brands.";
+}
+if(niche==="callcenter"){
+headline.innerText="Call Center & BPO Websites";
+subtext.innerText="Professional websites for outsourcing companies.";
+}
+if(niche==="saas"){
+headline.innerText="SaaS Websites Built for Growth";
+subtext.innerText="High-performance SaaS landing pages.";
+}
+</script>
+
+</body>
+</html>
